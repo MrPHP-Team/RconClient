@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'ru.lion'
+version '1.3-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+ext {
+    defaultEncoding = 'UTF-8'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'ru.lion.Main'
+    }
+}
